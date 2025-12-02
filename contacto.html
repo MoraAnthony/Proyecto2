@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubicación y Contacto - EmprendeSICOP</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <!-- CSS Propio -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contacto.css">
+
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+
+
+<body>
+
+<!---------------------------- NAVBAR ---------------------------->
+<!-- NAVBAR igual a las demás páginas -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logo2.webp" alt="Logo SICOP" width="55" class="me-2">
+      <span class="fw-bold d-none d-md-inline">Guía SICOP</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto gap-lg-5 nav-menu-lg mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
+        <li class="nav-item"><a class="nav-link" href="propuesta.html">Propuesta</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-color py-5">
+  <div class="container text-center">
+    <h1 class="fw-bold">Contacto y Ubicación</h1>
+    <p class="lead">
+      Utilice este formulario para solicitar información o asesoría SICOP.
+    </p>
+  </div>
+</section>
+
+<!-- MAPA INTERACTIVO -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="h4 mb-3">Mapa interactivo</h2>
+    <p class="mb-3">
+      El mapa para contextualizar el lugar desde donde realizas la consulta.
+    </p>
+    <div id="map" style="height: 350px; border-radius: 15px; overflow: hidden;"></div>
+  </div>
+</section>
+
+<!-- EXPLICACIÓN VISUAL + FORMULARIO + CAPTCHA -->
+<section class="py-5">
+  <div class="container">
+
+    <!-- Explicación visual -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10">
+        <div class="info-box">
+          <p class="info-text mb-0">
+            <strong>¿Deseas completar el formulario?</strong><br>
+            Este formulario recopila tus datos de contacto y la consulta específica que tengas sobre los
+            requisitos, procesos y uso de SICOP. La información se usa solo con fines académicos y 
+            se maneja respetando principios de privacidad. <strong>EmprendeSICOP</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Captcha + Formulario -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="contact-card p-4 shadow rounded">
+
+          <div class="mb-4 text-center">
+            <p class="mb-2">Verifica que no eres un robot para habilitar el envío del formulario:</p>
+            <div class="g-recaptcha"
+                 data-sitekey="6LdedR4sAAAAANcQ-AAqi0wguVkM9HDOeQM5SkBt"
+                 data-callback="mostrarFormulario">
+            </div>
+          </div>
+
+          <form id="contactForm">
+
+
+<!-- Botón para capturar ubicación -->
+<button type="button" id="btnUbicacion" class="btn btn-secondary mb-3">
+  Obtener mi ubicación
+</button>
+
+<!-- Campos solo para guardar los datos -->
+<input type="hidden" name="latitud" id="latitud">
+<input type="hidden" name="longitud" id="longitud">
+
+<!-- Opcional: mostrar lo que se obtuvo -->
+<div class="small text-muted mt-1" id="ubicacionTexto"></div>
+
+
+
+
+
+            <!-- Campo 1: Nombre -->
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre completo">
+              <div class="invalid-feedback">El nombre debe tener al menos 3 caracteres.</div>
+            </div>
+
+            <!-- Campo 2: Correo -->
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" id="correo" class="form-control" placeholder="ejemplo@correo.com">
+              <div class="invalid-feedback">Ingrese un correo electrónico válido.</div>
+            </div>
+
+            <!-- Campo 3: Teléfono -->
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="text" id="telefono" class="form-control" placeholder="Número de teléfono">
+              <div class="invalid-feedback">El teléfono debe tener al menos 8 dígitos numéricos.</div>
+            </div>
+
+            <!-- Campo 4: Mensaje -->
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje / Consulta</label>
+              <textarea id="mensaje" class="form-control" rows="4"
+                        placeholder="Describa brevemente su consulta"></textarea>
+              <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 btn-animado" id="btnEnviar">
+              Enviar mensaje
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL DE ENVÍO -->
+<div class="modal fade" id="envioModal" tabindex="-1" aria-labelledby="envioModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="envioModalLabel">Datos enviados correctamente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre:</strong> <span id="modalNombre"></span></p>
+        <p><strong>Correo:</strong> <span id="modalCorreo"></span></p>
+        <p><strong>Teléfono:</strong> <span id="modalTelefono"></span></p>
+        <p><strong>Mensaje:</strong></p>
+        <p id="modalMensaje" class="mb-0"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="py-3 bg-primary text-center text-white">
+  <small>Proyecto académico ISW-512 · EmprendeSICOP &copy; 2025</small>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/contacto.js"></script>

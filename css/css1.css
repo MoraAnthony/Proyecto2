@@ -1,0 +1,110 @@
+/* AnimacionUI */
+/* AnimacionUI */
+.demo-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.demo-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.demo-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 1rem auto 0;
+    background: linear-gradient(90deg, #E75C84, #FBB040);
+}
+
+.interaccion-completa {
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#like-btn {
+    background: linear-gradient(90deg, #E75C84, #FBB040);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+#like-btn:hover {
+    transform: scale(1.05);
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #FFD93D 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+#sparkle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFD93D 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.principios-grid {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+
+.micro-btn {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #8C144E, #EE9029);
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.micro-btn:hover {
+    box-shadow: 0 0 20px rgba(255, 180, 100, 0.6);
+}
+
+.click-flash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+section {
+  height: auto;
+  min-height: auto;
+  display: block;
+  padding: 3rem 10%;
+}
+
+

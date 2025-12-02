@@ -1,0 +1,19 @@
+
+[
+  {
+    "nombre": "CCSS - Consulta de estado",
+    "url": "https://www.ccss.sa.cr/serviciosenlinea"
+  },
+  {
+    "nombre": "Ministerio de Trabajo - Consulta de obligaciones",
+    "url": "https://www.mtss.go.cr/"
+  },
+  {
+    "nombre": "SICOP - Plataforma de compras públicas",
+    "url": "https://www.sicop.go.cr/"
+  },
+  {
+    "nombre": "Ministerio de Hacienda - Contribuyentes",
+    "url": "https://www.hacienda.go.cr/"
+  }
+]

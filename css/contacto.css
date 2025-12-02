@@ -1,0 +1,25 @@
+.hero-color {
+    background: linear-gradient(135deg, #dfe9ff, #ffffff);
+}
+
+/* Caja de explicación visual */
+.info-box {
+    background: #eaf7ee;
+    border: 2px solid #94d3ac;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.info-text {
+    color: #134d2f;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Card del formulario */
+.contact-card {
+    border-left: 6px solid #0d6efd;
+    background: #ffffff;
+    border-radius: 15px;
+}

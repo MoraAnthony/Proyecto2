@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta / Solución - Emprende Alimentos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">EmprendeSICOP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link active" href="propuesta.html">Propuesta</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+
+<section class="content-section fade-in">
+    <div class="container">
+
+        <h2 class="section-heading text-center mb-4">Detalle de Requisitos</h2>
+
+        <!-- Firma digital -->
+        <div class="requisito-box">
+            <div class="icono-req">🖊️</div>
+            <h4>Firma Digital</h4>
+            <p>Se obtiene en bancos autorizados y entidades certificadoras oficiales. 
+               Es indispensable para firmar ofertas en SICOP.</p>
+        </div>
+
+        <!-- Registro como proveedor -->
+        <div class="requisito-box">
+            <div class="icono-req">🌐</div>
+            <h4>Registro como Proveedor</h4>
+            <p>Debe inscribirse en el Sistema Electrónico de Reconocimiento (SER) 
+               y registrar los datos en la plataforma SICOP.</p>
+        </div>
+
+        <!-- Patente -->
+        <div class="requisito-box">
+            <div class="icono-req">🏢</div>
+            <h4>Permiso de Patente</h4>
+            <p>Se solicita ante la Municipalidad correspondiente, ya sea presencialmente 
+               o mediante sus portales digitales.</p>
+        </div>
+
+        <!-- CCSS -->
+        <div class="requisito-box">
+            <div class="icono-req">💼</div>
+            <h4>Estar al día con la CCSS</h4>
+            <p>Puede verificar y regularizar su estado en línea mediante la Oficina Virtual: 
+               <strong>www.ccss.sa.cr</strong></p>
+        </div>
+
+        <!-- Capacidad legal -->
+        <div class="requisito-box">
+            <div class="icono-req">📜</div>
+            <h4>Capacidad Legal y Solvencia</h4>
+            <p>Debe demostrar capacidad de obrar, no estar inhabilitado y acreditar solvencia 
+               económica, técnica o profesional.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- SECCIÓN DE VIDEO (antes de la mini-aplicación) -->
+<!-- SECCIÓN DE VIDEO EXPLICATIVO -->
+<section class="video-section py-5">
+  <div class="container">
+    <h2 class="text-center text-dark mb-4 fw-bold">VIDEO EXPLICATIVO</h2>
+
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+
+        <div class="card video-card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <iframe 
+              src="https://www.youtube.com/embed/ddFEYHcRMFQ"
+              title="Curso SICOP – Video explicativo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title">Capacitación SICOP</h5>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- MINI-APLICACIÓN: CHECKLIST + SIMULADOR -->
+  <section class="py-5 bg-light">
+    <div class="container animate-on-scroll">
+      <h2 class="h4 mb-4"> ¿Qué tan preparado está su emprendimiento?</h2>
+      <p class="mb-4">
+        Marque los requisitos que ya cumple su negocio. La guía le mostrará un porcentaje
+        de avance y una recomendación según su estado actual.
+      </p>
+
+      <div class="row g-4">
+        <!-- Checklist -->
+        <div class="col-12 col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 mb-3">Checklist de requisitos</h3>
+
+              <form id="formChecklist">
+                <div class="form-check mb-2">
+                  <input class="form-check-input requisito-check" type="checkbox" id="reqPermiso">
+                  <label class="form-check-label" for="reqPermiso">
+                    Tengo el permiso sanitario de funcionamiento vigente.
+                  </label>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input class="form-check-input requisito-check" type="checkbox" id="reqCarne">
+                  <label class="form-check-label" for="reqCarne">
+                    El personal cuenta con carné de manipulación de alimentos.
+                  </label>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input class="form-check-input requisito-check" type="checkbox" id="reqRegistro">
+                  <label class="form-check-label" for="reqRegistro">
+                    Mis productos procesados tienen registro sanitario (si aplica).
+                  </label>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input class="form-check-input requisito-check" type="checkbox" id="reqTributacion">
+                  <label class="form-check-label" for="reqTributacion">
+                    Estoy inscrito en Tributación y al día con la CCSS.
+                  </label>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input class="form-check-input requisito-check" type="checkbox" id="reqFirmaDigital">
+                  <label class="form-check-label" for="reqFirmaDigital">
+                    Cuento con firma digital válida para trámites en línea.
+                  </label>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input class="form-check-input requisito-check" type="checkbox" id="reqProveedorSICOP">
+                  <label class="form-check-label" for="reqProveedorSICOP">
+                    Estoy inscrito como proveedor en SICOP.
+                  </label>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input requisito-check" type="checkbox" id="reqExperiencia">
+                  <label class="form-check-label" for="reqExperiencia">
+                    He revisado al menos un concurso de alimentos en SICOP para entender el proceso.
+                  </label>
+                </div>
+
+                <button type="button" id="btnReiniciar" class="btn btn-outline-secondary btn-animado">
+                  Reiniciar checklist
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="col-12 col-lg-6">
+          <div class="card resultado-card h-100">
+            <div class="card-body">
+              <h3 class="h5 mb-3">Nivel de preparación</h3>
+
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <span>Progreso total:</span>
+                  <span id="porcentajeTexto" class="fw-bold">0%</span>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Progreso de requisitos">
+                  <div id="barraProgreso" class="progress-bar bg-danger" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div id="estadoMensaje" class="mt-3">
+                <h4 class="h6 mb-2">Estado actual</h4>
+                <p class="mb-0">
+                  Aún no se han marcado requisitos. Inicie seleccionando los pasos que ya completó
+                  para ver su nivel de preparación.
+                </p>
+              </div>
+
+              <hr class="my-4">
+
+              <div id="recomendacionLista">
+                <!-- JS insertará aquí recomendaciones detalladas según el nivel -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <footer class="py-3 bg-primary text-center text-white">
+    <small>Proyecto académico ISW-512 · EmprendeAlimentos &copy; 2025</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/propuesta.js"></script>
+</body>
+</html>

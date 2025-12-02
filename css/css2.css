@@ -1,0 +1,107 @@
+/* Sección general */
+.content-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Grid responsivo */
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjetas */
+.type-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
+
+.type-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* Iconos */
+.type-icon {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* Títulos */
+.type-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Texto */
+.type-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* GRID de tarjetas */
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Tarjeta */
+.type-card {
+    background: #ffffff;
+    padding: 1.8rem 1.3rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+/* Hover elegante */
+.type-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #0d6efd;
+}
+
+/* Icono */
+.type-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Icono flotando */
+.type-card:hover .type-icon {
+    transform: translateY(-6px) scale(1.1);
+}
+
+/* Título */
+.type-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003566;
+    margin-bottom: 0.5rem;
+}
+
+/* Descripción */
+.type-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+

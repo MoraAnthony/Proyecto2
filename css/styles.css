@@ -1,0 +1,196 @@
+/* Tipografía y ajustes básicos */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+               
+}
+
+
+
+
+/* Hero */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+}
+
+@media (min-width: 992px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* Cards de pasos / requisitos */
+.step-card,
+.requisito-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover,
+.requisito-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones con micro-interacción */
+.btn-animado {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-animado:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Animación de entrada (Tema 3) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-load {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-item {
+  height: 200px; /* más pequeño */
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 260px; /* tamaño para tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-item {
+    height: 300px; /* tamaño para escritorio */
+  }
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* evita el recorte y zoom */
+  object-position: center;
+  background-color: #ffffff; /* opcional: relleno limpio */
+}
+
+.carousel-inner {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+
+
+
+/* Estilos para la mini-aplicación de propuesta */
+.resultado-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estados de preparación */
+.estado-bajo {
+  border-left: 6px solid #dc3545; /* rojo */
+  background-color: #fce7e9;
+}
+
+.estado-medio {
+  border-left: 6px solid #ffc107; /* amarillo */
+  background-color: #fff7df;
+}
+
+.estado-alto {
+  border-left: 6px solid #198754; /* verde */
+  background-color: #e5f7ed;
+}
+
+
+
+
+.logo-icon {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:#198754;
+  color:#fff;
+  font-size:1.2rem;
+}
+
+
+/* Hero */
+.inicio-hero {
+  background: radial-gradient(circle at top left, #d6f5df, #ffffff);
+}
+
+/* Carrusel: usa imágenes de fondo o color degradado */
+.hero-slide {
+  min-height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-slide-1 {
+  background-image: url("../img/sicop.jpg");
+}
+
+.hero-slide-2 {
+  background-image: url("../img/sicop2\.jpg");
+}
+
+.hero-slide-3 {
+  background-image: url("../img/sicop3.jpg");
+}
+
+.carousel-caption h5 {
+  text-shadow: 0 2px 4px rgba(44, 20, 20, 0.7);
+}
+
+/* Transición para tema claro/oscuro */
+html {
+  transition: background-color .2s ease, color .2s ease;
+}
+
+
+
+
+@media (min-width: 992px) {
+  .nav-menu-lg .nav-link {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    letter-spacing: 0.03em;
+  }
+}
+
+
+

@@ -1,0 +1,363 @@
+/* Contenedor del diagrama */
+.flow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* IMPORTANTE: evita recortes */
+  gap: 1.2rem;
+  padding: 1.5rem 1rem; /* menor padding lateral */
+  background: #0b1020;
+  border-radius: 1rem;
+  overflow-x: auto; 
+  width: 100%; /* asegura que el contenedor ocupe el ancho */
+}
+
+/* Cards más pequeñas */
+.flow-step {
+  flex: 0 0 auto; /* NO se encoge, NO se corta */
+  width: 160px;   /* tamaño compacto */
+  padding: 1rem;
+  background: #111827;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #e5e7eb;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 25px rgba(0,0,0,0.45);
+}
+
+/* Icono pequeño */
+.flow-icon {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+/* Textos */
+.flow-step h4 {
+  font-size: 1rem;
+  margin-bottom: .4rem;
+  font-weight: 600;
+}
+
+.flow-step p {
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+/* Flechas */
+.flow-arrow {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+}
+
+.arrow-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  position: relative;
+  border-radius: 999px;
+}
+
+.arrow-line::after {
+  content: "→";
+  position: absolute;
+  right: -10px;
+  top: -6px;
+  font-size: 1rem;
+  color: #e5e7eb;
+}
+
+/* Flecha de respuesta */
+.flow-arrow-back .arrow-line::after {
+  content: "←";
+  left: -10px;
+  right: auto;
+}
+
+/* Texto pequeño debajo de la flecha */
+.arrow-label {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  margin-top: .3rem;
+}
+
+/* Responsive vertical */
+@media (max-width: 768px) {
+  .flow-diagram {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flow-step {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .flow-arrow {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .arrow-line {
+    width: 2px;
+    height: 40px;
+  }
+
+  .arrow-line::after {
+    content: "↓";
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    top: auto;
+  }
+
+  .flow-arrow-back .arrow-line::after {
+    content: "↓";
+  }
+}
+
+
+
+/* Sección centrada */
+.configuracion-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+/* Tarjeta bonita */
+.config-card {
+    background: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    max-width: 750px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estilos del texto */
+.config-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #003566;
+    font-weight: 700;
+}
+
+.config-card p,
+.config-card li {
+    font-size: 1rem;
+    color: #444;
+}
+
+.config-card ul {
+    margin-left: 1rem;
+}
+
+/* Hover suave */
+.config-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+/* Contenedor centrado */
+#autoresContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilo de la tarjeta */
+.autor-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Animación al pasar el mouse */
+.autor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* Imagen circular */
+.autor-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Nombre */
+.autor-card h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003566;
+    margin-bottom: .5rem;
+}
+
+/* Descripción */
+.autor-card p {
+    color: #555;
+    font-size: .95rem;
+}
+
+/* Espaciado entre tarjetas */
+.autor-col {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Prueba de CARD */
+
+.autor-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    transition: .3s ease;
+}
+
+.autor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+/* FOTO */
+.autor-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Nombre */
+.autor-nombre {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0A2A43;
+    margin-bottom: .5rem;
+}
+
+/* Descripción */
+.autor-descripcion {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Botón */
+.autor-btn {
+    display: inline-block;
+    padding: .6rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+
+
+
+/* Hero simple sin fondo */
+/* Hero con fondo suave */
+.autor-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.autor-foto {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1e88e5;
+}
+
+.autor-nombre {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.autor-descripcion {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+
+.hero-color {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    color: #0d47a1;
+}
+
+
+
+.info-box {
+    background: #eaf7ee;
+    border: 2px solid #94d3ac;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.info-text { color: #134d2f; }
+
+
+
+
+
+
+/* Recuadro estilo institucional verde */
+.info-box {
+    background: #eaf7ee;
+    border: 2px solid #94d3ac;
+    padding: 2.2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+/* Texto dentro del recuadro */
+.info-text {
+    color: #134d2f;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Título */
+.config-title {
+    color: #134d2f;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Lista dentro del recuadro */
+.config-list {
+    margin-left: 1.2rem;
+}
+
+

@@ -1,0 +1,166 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio - Emprende Alimentos y Vende al Estado</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/css2.css">
+</head>  
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logo2.webp" alt="Logo SICOP" width="55" class="me-2">
+      <span class="fw-bold d-none d-md-inline">EmprendeSICOP</span>
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto gap-lg-5 nav-menu-lg mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
+        <li class="nav-item"><a class="nav-link" href="propuesta.html">Propuesta</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- HERO + INTRODUCCIÓN -->
+  <section class="hero bg-light">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 animate-on-load">
+          <h1 class="fw-bold hero-title mb-3">
+            Guía para emprender y participar en ventas para Estado mediante SICOP
+          </h1>
+          <p class="lead">
+            Descubre los pasos básicos para formalizar tu negocio y participar en procesos de venta para el Gobierno costarricense.
+          </p>
+          <a href="#tipos" class="btn btn-primary btn-animado mt-2">
+  Ver requisitos principales
+</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+   <!-- CARRUSEL (mínimo 3 diapositivas) --> 
+  <section class="py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- Cambia col-lg-8 / col-lg-10 según qué tan ancho lo quieras -->
+        <div class="col-12 col-lg-10">
+          <div id="heroCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden"
+               data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                      class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                      aria-label="Diapositiva 2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                      aria-label="Diapositiva 3"></button>
+            </div>
+
+
+            <div class="carousel-inner">
+              <div class="carousel-item active hero-slide hero-slide-1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Identificación de Requisitos</h5>
+                  <p>Completar los requsitos Municipales</p>
+                </div>
+              </div>
+              <div class="carousel-item hero-slide hero-slide-2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Requisitos Municipales</h5>
+                  <p>Cumpli con los requisitos Sanitarios</p>
+                </div>
+              </div>
+              <div class="carousel-item hero-slide hero-slide-3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Reuisitos Tributarios</h5>
+                  <p>Cumpli con los requisitos Tributarios .</p>
+                </div>
+              </div>
+            </div>
+
+
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- REQUISITOS PRINCIPALES CARGADOS DESDE JSON -->
+  
+ <section id="tipos" class="content-section fade-in">
+
+                <h2 class="section-heading">Tipos de requsitos</h2>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="type-icon">🌐</div>
+                        <h3>Registro como Proveedor</h3>
+                        <p>Inscribirse en el sistema de WWWW.SICOP.COM</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-icon">🖊️</div>
+                        <h3>Firma Digital</h3>
+                        <p>Contar con un certificado de firma digital válido</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-icon">🏢</div>
+                        <h3>Permiso y patentes</h3>
+                        <p>Tener vigente la patente municipal .</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-icon">💼</div>
+                        <h3>Obligaciones sociales y laborales</h3>
+                        <p>Estar al día con los pagos ante la Caja Costarricense de Seguro Social (CCSS) y FODESAF.</p>
+                    </div>
+                </div>
+
+ <div class="text-center mt-4">
+        <button id="btnVerMas" class="btn btn-outline-primary btn-animado">
+          Consulte en el sitio web
+        </button>
+       <div id="listaEnlaces" class="mt-3 d-none"></div>
+      </div>
+
+  </section>  
+  <!-- FOOTER -->
+  <footer class="py-3 bg-primary text-center text-white">
+    <small>Proyecto académico ISW-512 · EmprendeAlimentos &copy; 2025</small>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

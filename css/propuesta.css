@@ -1,0 +1,116 @@
+/* css/propuesta.css */
+
+/* Hero de la propuesta */
+.propuesta-hero {
+  background: linear-gradient(180deg, #e1f0ff 0%, #ffffff 70%);
+}
+
+.propuesta-title {
+  color: #0d47a1;
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  font-weight: 800;
+}
+
+.propuesta-desc {
+  color: #174a7a;
+  font-size: 1rem;
+}
+
+/* Caja de explicación visual */
+.propuesta-info {
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 71, 161, 0.12);
+}
+
+/* Simulador y resultado */
+.simulador-card,
+.resultado-card {
+  border-radius: 18px;
+}
+
+/* Retroalimentación visual del estado */
+.estado-badge {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pequeños ajustes responsivos */
+@media (max-width: 768px) {
+  .propuesta-hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Video  */
+
+.video-section {
+  background: linear-gradient(135deg, #0a233a, #11527a);
+  background-size: cover;
+  background-position: center;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+}
+
+.video-card .card-body {
+  padding: 1.8rem;
+}
+
+
+
+
+/* Caja bonita para requisitos */
+.requisito-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    margin-bottom: 1.8rem; /* SEPARACIÓN ENTRE TARJETAS */
+    border-left: 6px solid #0d6efd;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.requisito-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.icono-req {
+    font-size: 2.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.requisito-box h4 {
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.requisito-box p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.content-section {
+    margin-top: 3rem;
+}
+
+.content-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 3rem;
+}
+
+.requisito-box {
+    margin-bottom: 2rem;
+    padding: 1.8rem;
+}
