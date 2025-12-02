@@ -160,15 +160,15 @@ body {
 }
 
 .hero-slide-1 {
-  background-image: url("Img/sicop.jpg");
+  background-image: url("../Img/sicop.jpg");
 }
 
 .hero-slide-2 {
-  background-image: url("Img/sicop2\.jpg");
+  background-image: url("../Img/sicop2\.jpg");
 }
 
 .hero-slide-3 {
-  background-image: url("Img/sicop3.jpg");
+  background-image: url("../Img/sicop3.jpg");
 }
 
 .carousel-caption h5 {
